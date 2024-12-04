@@ -1,13 +1,13 @@
 function Navbar() {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 -mb-[5rem]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="35"
+              height="35"
               fill="currentColor"
               class="bi bi-link-45deg"
               viewBox="0 0 16 16"
@@ -20,12 +20,12 @@ function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
+            <li className="py-2">
               <a target="_blank" href="https://github.com/nnamdi-nwaocha/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="35"
+                  height="35"
                   fill="currentColor"
                   class="bi bi-github"
                   viewBox="0 0 16 16"
@@ -34,15 +34,15 @@ function Navbar() {
                 </svg>
               </a>
             </li>
-            <li>
+            <li className="py-2">
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/nnamdi-nwaocha-a03984267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="35"
+                  height="35"
                   fill="currentColor"
                   class="bi bi-linkedin"
                   viewBox="0 0 16 16"
@@ -51,12 +51,12 @@ function Navbar() {
                 </svg>
               </a>
             </li>
-            <li>
+            <li className="py-2">
               <a target="_blank" href="https://x.com/NnamdiNwaocha?s=09">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="35"
+                  height="35"
                   fill="currentColor"
                   class="bi bi-twitter-x"
                   viewBox="0 0 16 16"
@@ -119,7 +119,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">CV</a>
+        <a className="btn rounded-badge">CV</a>
       </div>
     </div>
   );
