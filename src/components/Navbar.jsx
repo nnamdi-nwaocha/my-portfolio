@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <div className="navbar bg-base-100 -mb-[5rem]">
+    <div className="navbar bg-base-100 relative -mb-[5rem] z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
