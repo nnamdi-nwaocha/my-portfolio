@@ -1,0 +1,32 @@
+/* /src/styles/styles.css */
+.floating-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #526d82;
+    text-shadow: 2px 2px 5px white;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .floating-text-p {
+    padding: 0.4rem 0.8rem;
+    background-color: white;
+    transform: translate(6.5rem, -2rem);
+    
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-50%, -90%);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+  
