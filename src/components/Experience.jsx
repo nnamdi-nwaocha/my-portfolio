@@ -1,4 +1,4 @@
-import TechCard from "./techCard";
+import TechCard from "./TechCard";
 
 function Experience() {
   return (
