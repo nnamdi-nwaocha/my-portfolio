@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 
-function Technologies() {
+function Affiliates() {
   return (
     <>
       <Marquee className="rounded-b-[5rem] bg-[#f2f2f2] pt-[7rem] pb-[4rem]">
@@ -18,4 +18,4 @@ function Technologies() {
   );
 }
 
-export default Technologies;
+export default Affiliates;

@@ -1,15 +1,16 @@
-import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Technologies from "./components/Technologies";
+import Affiliates from "./components/Affiliates";
+import Experience from "./components/Experience";
 
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
-      <Technologies />
+      <Affiliates />
+      <Experience />
     </>
   );
 }

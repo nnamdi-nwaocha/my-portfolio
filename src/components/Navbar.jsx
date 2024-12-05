@@ -1,6 +1,24 @@
+import React, { useState } from "react";
+
 function Navbar() {
+  const [buttonText, setButtonText] = useState("Copy Email");
+  const email = "nnamdinwaocha@gmail.com"; // Replace with your actual email
+
+  const copyEmailToClipboard = () => {
+    navigator.clipboard.writeText(email)
+      .then(() => {
+        setButtonText("Copied!"); // Change button text to "Copied!"
+        setTimeout(() => {
+          setButtonText("Copy Email"); // Revert back to "Copy Email" after 2 seconds
+        }, 1500);
+      })
+      .catch(err => {
+        console.error("Error copying email: ", err);
+      });
+  };
+
   return (
-    <div className="navbar bg-base-100 relative -mb-[5rem] z-50">
+    <div className="navbar bg-base-100 relative -mb-[5rem] z-20">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -67,7 +85,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="btn rounded-badge ">Copy Email</a>
+        <a className="btn rounded-badge" onClick={copyEmailToClipboard}>{buttonText}</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -119,7 +137,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn rounded-badge">CV</a>
+        <a className="btn rounded-badge" href="https://drive.google.com/file/d/1UGkXBlDUjH2enq78svnWe7H5sLQyoR9c/view?usp=drive_link" target="_blank">CV</a>
       </div>
     </div>
   );
