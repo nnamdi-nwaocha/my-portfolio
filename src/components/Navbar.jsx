@@ -5,33 +5,37 @@ function Navbar() {
   const email = "nnamdinwaocha@gmail.com"; // Replace with your actual email
 
   const copyEmailToClipboard = () => {
-    navigator.clipboard.writeText(email)
+    navigator.clipboard
+      .writeText(email)
       .then(() => {
         setButtonText("Copied!"); // Change button text to "Copied!"
         setTimeout(() => {
           setButtonText("Copy Email"); // Revert back to "Copy Email" after 2 seconds
         }, 1500);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error("Error copying email: ", err);
       });
   };
 
   return (
-    <div className="navbar bg-base-100 relative -mb-[5rem] z-20">
+    <div className="navbar relative -mb-[5rem] z-20">
       <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <div className="dropdown mr-4">
+          <div tabIndex={0} role="button" className="btn bg-gray-900 rounded-badge px-[2rem] lg:hidden hover:bg-white hover:text-gray-900">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="35"
-              height="35"
-              fill="currentColor"
-              class="bi bi-link-45deg"
-              viewBox="0 0 16 16"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z" />
-              <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
             </svg>
           </div>
           <ul
@@ -85,7 +89,12 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="btn rounded-badge" onClick={copyEmailToClipboard}>{buttonText}</a>
+        <a
+          className="btn bg-gray-900 rounded-badge px-[2rem] border-1 border-[#526d82]  hover:bg-white hover:text-gray-900"
+          onClick={copyEmailToClipboard}
+        >
+          {buttonText}
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -137,7 +146,13 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn rounded-badge" href="https://drive.google.com/file/d/1UGkXBlDUjH2enq78svnWe7H5sLQyoR9c/view?usp=drive_link" target="_blank">CV</a>
+        <a
+          className="btn bg-gray-900 rounded-badge px-[2rem] border-1 border-[#526d82]  hover:bg-white hover:text-gray-900"
+          href="https://drive.google.com/file/d/1UGkXBlDUjH2enq78svnWe7H5sLQyoR9c/view?usp=drive_link"
+          target="_blank"
+        >
+          CV
+        </a>
       </div>
     </div>
   );
