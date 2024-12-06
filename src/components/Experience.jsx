@@ -60,7 +60,7 @@ function Experience() {
           >
             <TechCard
               name={"NodeJS"}
-              level={84}
+              level={74}
               color={"#388e3c"}
               category={"Framework"}
             />
