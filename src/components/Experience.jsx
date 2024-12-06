@@ -28,6 +28,7 @@ function Experience() {
             "card9 ."
             ". card10"
             "card11 ."
+            ". card12"
           `,
           }}
         >
@@ -131,7 +132,7 @@ function Experience() {
             />
           </div>
           <div
-            style={{ gridArea: "card9" }}
+            style={{ gridArea: "card10" }}
             className="flex justify-center items-center"
           >
             <TechCard
@@ -142,7 +143,7 @@ function Experience() {
             />
           </div>
           <div
-            style={{ gridArea: "card9" }}
+            style={{ gridArea: "card11" }}
             className="flex justify-center items-center"
           >
             <TechCard
@@ -150,6 +151,17 @@ function Experience() {
               level={66}
               color={"#38bdf8"}
               category={"Styling"}
+            />
+          </div>
+          <div
+            style={{ gridArea: "card12" }}
+            className="flex justify-center items-center"
+          >
+            <TechCard
+              name={"NextJS"}
+              level={54}
+              color={"white"}
+              category={"Framework"}
             />
           </div>
         </div>

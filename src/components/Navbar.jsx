@@ -22,10 +22,14 @@ function Navbar() {
     <div className="navbar relative -mb-[5rem] z-20">
       <div className="navbar-start">
         <div className="dropdown mr-4">
-          <div tabIndex={0} role="button" className="btn bg-gray-900 rounded-badge px-[2rem] lg:hidden hover:bg-white hover:text-gray-900">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn bg-gray-900 rounded-badge px-[2rem] lg:hidden hover:bg-white hover:text-gray-900"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -102,8 +106,8 @@ function Navbar() {
             <a target="_blank" href="https://github.com/nnamdi-nwaocha/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="28"
+                height="28"
                 fill="currentColor"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
@@ -119,8 +123,8 @@ function Navbar() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="28"
+                height="28"
                 fill="currentColor"
                 class="bi bi-linkedin"
                 viewBox="0 0 16 16"
@@ -133,8 +137,8 @@ function Navbar() {
             <a target="_blank" href="https://x.com/NnamdiNwaocha?s=09">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="28"
+                height="28"
                 fill="currentColor"
                 class="bi bi-twitter-x"
                 viewBox="0 0 16 16"
