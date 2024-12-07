@@ -2,7 +2,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Affiliates from "./components/Affiliates";
-import Experience from "./components/Experience";
+import Expertise from "./components/Expertise";
+import WorkExperience from "./components/Work-Experience";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Navbar />
       <Hero />
       <Affiliates />
-      <Experience />
+      <Expertise />
+      <WorkExperience />
     </>
   );
 }

@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 function Affiliates() {
   return (
     <>
-      <Marquee className="rounded-b-[4rem] bg-[#f2f2f2] pt-[7rem] pb-[4rem]">
+      <Marquee className="rounded-b-[5rem] bg-[#f2f2f2] pt-[7rem] pb-[4rem]">
         <div>
           <img src="./images/logos/1.png" />
         </div>

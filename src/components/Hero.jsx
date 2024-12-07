@@ -20,7 +20,7 @@ function Hero() {
   };
 
   return (
-    <div className="hero bg-gray-900 min-h-screen rounded-b-[4rem] relative top-[5rem] z-10 overflow-hidden">
+    <div className="hero bg-gray-900 min-h-screen rounded-b-[5rem] relative top-[5rem] z-10 overflow-hidden">
       {/* Meteors */}
       <Meteors number={30} />
       
