@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import {
   IconDatabase,
@@ -8,6 +8,22 @@ import {
 } from "@tabler/icons-react";
 
 export function BentoGridDemo() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768); // Adjust this value based on your screen size threshold
+    };
+
+    handleResize(); // Check screen size on initial load
+    window.addEventListener("resize", handleResize); // Add resize event listener
+    return () => window.removeEventListener("resize", handleResize); // Clean up event listener
+  }, []);
+
+  const filteredItems = isSmallScreen
+    ? items.filter((item) => item.completed) // Filter only completed items on small screens
+    : items; // Show all items on larger screens
+
   return (
     <div className="px-6 py-16">
       <h2 className="text-center text-5xl font-bold text-white mb-[3rem]">
@@ -15,7 +31,7 @@ export function BentoGridDemo() {
       </h2>
 
       <BentoGrid className="max-w-4xl mx-auto">
-        {items.map((item, i) => (
+        {filteredItems.map((item, i) => (
           <BentoGridItem
             key={i}
             title={item.title}
@@ -29,9 +45,11 @@ export function BentoGridDemo() {
     </div>
   );
 }
+
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
 );
+
 const items = [
   {
     title: "Building a CRUD API With NestJS, PostgreSQL, and TypeORM",
@@ -43,6 +61,7 @@ const items = [
       />
     ),
     icon: <IconServer className="h-4 w-4 text-neutral-500" />,
+    completed: true,
   },
   {
     title: "Building a REST API with Deno, Oak, and DenoKV",
@@ -50,6 +69,7 @@ const items = [
       "Learn how to create a REST API using Deno, Oak framework, and DenoKV.",
     header: <Skeleton />,
     icon: <IconDatabase className="h-4 w-4 text-neutral-500" />,
+    completed: false,
   },
   {
     title: "Using Supabase with NestJS",
@@ -57,12 +77,14 @@ const items = [
       "Implement authentication and CRUD operations with Supabase in NestJS.",
     header: <Skeleton />,
     icon: <IconDatabase className="h-4 w-4 text-neutral-500" />,
+    completed: false,
   },
   {
     title: "GraphQL API in NestJS",
     description: "Build a GraphQL API in NestJS from scratch.",
     header: <Skeleton />,
     icon: <IconGraph className="h-4 w-4 text-neutral-500" />,
+    completed: false,
   },
   {
     title: "How to Implement Access-Control with CASL and NestJS",
@@ -70,5 +92,6 @@ const items = [
       "Secure your application by implementing access control using CASL and NestJS.",
     header: <Skeleton />,
     icon: <IconLock className="h-4 w-4 text-neutral-500" />,
+    completed: false,
   },
 ];
