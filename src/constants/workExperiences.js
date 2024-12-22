@@ -9,7 +9,7 @@ export const workExperiences = [
       "Implemented user authentication and authorization using Passport.js and JWT",
       "Built reusable and dynamic modules in NestJS",
       "Optimized database operations by using TypeORM",
-      "Created middleware and guards to validate user input, enforce security policies, and monitor application behavior",
+      "Enabled Attribute Based Access Control",
     ],
   },
 ];

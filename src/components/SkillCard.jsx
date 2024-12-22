@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import CountUp from "react-countup";
 
-function TechCard({name, level, category, color}) {
+function TechCard({ name, level, category, color }) {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef(null);
 
@@ -13,7 +13,7 @@ function TechCard({name, level, category, color}) {
           observer.disconnect(); // Disconnect observer after triggering
         }
       },
-      { threshold: 0.1 } // Trigger when 10% of the component is visible
+      { threshold: 0.01 } // Trigger when 10% of the component is visible
     );
 
     if (cardRef.current) {
@@ -29,7 +29,12 @@ function TechCard({name, level, category, color}) {
     <div ref={cardRef} className="stats shadow">
       <div className="stat">
         <div className="stat-figure">
-          <img src={`./images/technologies/${name}.svg`} height={50} width={50} alt="" />
+          <img
+            src={`./images/technologies/${name}.svg`}
+            height={50}
+            width={50}
+            alt=""
+          />
         </div>
         <div className="stat-title">{name}</div>
         <div className="stat-value" style={{ color }}>
