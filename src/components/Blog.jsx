@@ -31,16 +31,33 @@ export function BentoGridDemo() {
       </h2>
 
       <BentoGrid className="max-w-4xl mx-auto">
-        {filteredItems.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            icon={item.icon}
-            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-          />
-        ))}
+        {filteredItems.map((item, i) =>
+          item.completed ? (
+            <a
+              key={i}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BentoGridItem
+                title={item.title}
+                description={item.description}
+                header={item.header}
+                icon={item.icon}
+                className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+              />
+            </a>
+          ) : (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              icon={item.icon}
+              className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+            />
+          )
+        )}
       </BentoGrid>
     </div>
   );
@@ -62,6 +79,7 @@ const items = [
     ),
     icon: <IconServer className="h-4 w-4 text-neutral-500" />,
     completed: true,
+    link: "https://medium.com/@nnamdinwaocha/building-a-crud-api-with-nestjs-postgresql-and-typeorm-2cde94538257",
   },
   {
     title: "Building a REST API with Deno, Oak, and DenoKV",
@@ -70,6 +88,7 @@ const items = [
     header: <Skeleton />,
     icon: <IconDatabase className="h-4 w-4 text-neutral-500" />,
     completed: false,
+    link: "",
   },
   {
     title: "Using Supabase with NestJS",
@@ -78,6 +97,7 @@ const items = [
     header: <Skeleton />,
     icon: <IconDatabase className="h-4 w-4 text-neutral-500" />,
     completed: false,
+    link: "",
   },
   {
     title: "GraphQL API in NestJS",
@@ -85,6 +105,7 @@ const items = [
     header: <Skeleton />,
     icon: <IconGraph className="h-4 w-4 text-neutral-500" />,
     completed: false,
+    link: "",
   },
   {
     title: "How to Implement Access-Control with CASL and NestJS",
@@ -93,5 +114,6 @@ const items = [
     header: <Skeleton />,
     icon: <IconLock className="h-4 w-4 text-neutral-500" />,
     completed: false,
+    link: "",
   },
 ];

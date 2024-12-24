@@ -21,7 +21,7 @@ function Expertise() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center space-y-8 mt-[3.5rem]">
         {/* Heading */}
-        <h2 className="text-5xl font-bold text-white">My Expertise</h2>
+        <h2 className="text-5xl font-bold text-white">My Tools</h2>
 
         {/* Grid Container */}
         <div
