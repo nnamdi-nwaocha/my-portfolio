@@ -74,7 +74,7 @@ const items = [
     header: (
       <img
         src="./images/post banners/nestjs crud.png"
-        className="w-full h-[6rem] object-cover object-left"
+        className="w-full h-full object-cover object-left"
       />
     ),
     icon: <IconServer className="h-4 w-4 text-neutral-500" />,

@@ -14,7 +14,7 @@ function Expertise() {
     .join("\n");
 
   return (
-    <div className="rounded-b-[5rem] relative top-[5rem] mt-[-5rem] z-10 pb-[4rem] flex flex-col items-center justify-center min-h-screen overflow-hidden bg-gray-900">
+    <div className="rounded-b-[5rem] relative top-[5rem] mt-[-5rem] z-10 pb-[4rem] flex flex-col items-center justify-center min-h-fit overflow-hidden bg-gray-900">
       {/* Meteors */}
       <Meteors number={30} />
 
