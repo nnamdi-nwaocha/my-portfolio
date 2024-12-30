@@ -6,6 +6,8 @@ import {
   IconLock,
   IconGraph,
 } from "@tabler/icons-react";
+import { div } from "framer-motion/client";
+import { Meteors } from "./Meteor";
 
 export function BentoGridDemo() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -25,40 +27,45 @@ export function BentoGridDemo() {
     : items; // Show all items on larger screens
 
   return (
-    <div className="px-6 py-16">
-      <h2 className="text-center text-5xl font-bold text-white mb-[3rem]">
-        Articles
-      </h2>
+    <div className="relative z-10 pb-[4rem] flex flex-col items-center justify-center min-h-fit overflow-hidden">
+      {/* Meteors */}
+      <Meteors number={30} />
 
-      <BentoGrid className="max-w-4xl mx-auto">
-        {filteredItems.map((item, i) =>
-          item.completed ? (
-            <a
-              key={i}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+      <div className="px-6 py-16 z-20">
+        <h2 className="text-center text-5xl font-bold text-white mb-[3rem]">
+          Articles
+        </h2>
+
+        <BentoGrid className="max-w-4xl mx-auto">
+          {filteredItems.map((item, i) =>
+            item.completed ? (
+              <a
+                key={i}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BentoGridItem
+                  title={item.title}
+                  description={item.description}
+                  header={item.header}
+                  icon={item.icon}
+                  className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+                />
+              </a>
+            ) : (
               <BentoGridItem
+                key={i}
                 title={item.title}
                 description={item.description}
                 header={item.header}
                 icon={item.icon}
                 className={i === 3 || i === 6 ? "md:col-span-2" : ""}
               />
-            </a>
-          ) : (
-            <BentoGridItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              header={item.header}
-              icon={item.icon}
-              className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-            />
-          )
-        )}
-      </BentoGrid>
+            )
+          )}
+        </BentoGrid>
+      </div>
     </div>
   );
 }
