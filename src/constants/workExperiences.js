@@ -6,10 +6,10 @@ export const workExperiences = [
     period: "June 2024 - Present",
     description: [
       "Integrated third-party APIs into applications",
-      "Implemented user authentication and authorization using Passport.js and JWT",
       "Built reusable and dynamic modules in NestJS",
       "Optimized database operations by using TypeORM",
       "Enabled Attribute Based Access Control",
+      "Worked with frontend developers to integrate APIs for smooth user experiences.",
     ],
   },
 ];
